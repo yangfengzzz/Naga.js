@@ -17,14 +17,14 @@ The Rust and WebAssembly experience is riding the Rust release trains to stable!
 That means we don't require any experimental feature flags. However, we do
 require Rust 1.30 or newer.
 
-#### wasm-pack
+### wasm-pack
 
 `wasm-pack` is your one-stop shop for building, testing, and publishing
 Rust-generated WebAssembly.
 
 Get [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/) here!
 
-#### cargo-generate
+### cargo-generate
 
 [cargo-generate](https://github.com/cargo-generate/cargo-generate) helps you get up and running quickly with a new Rust project
 by leveraging a pre-existing git repository as a template.
@@ -35,7 +35,7 @@ Install `cargo-generate` with this command:
 cargo install cargo-generate
 ```
 
-#### npm
+### npm
 
 `npm` is a package manager for JavaScript. We will use it to install and run a
 JavaScript bundler and development server. At the end of the tutorial, we will
