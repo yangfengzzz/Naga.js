@@ -4,35 +4,56 @@ naga.js compiled by using [rustwasm toolkit](https://rustwasm.github.io/docs/boo
 
 ## Getting Started
 
-If you want to be able to use Rust for wasm then you need an environment to be able to do that! If
-you haven't already you'll need to install [rustup][rustup] (the official tool) in order to install
-and manage different versions of the Rust compiler. Follow the instructions on the site to get it
-installed on your machine. For the time being, you'll need Rust nightly when working with wasm:
+This section describes how to set up the toolchain for compiling Rust programs
+to WebAssembly and integrate them into JavaScript.
 
-```bash
-$ rustup default nightly
+### The Rust Toolchain
+
+You will need the standard Rust toolchain, including `rustup`, `rustc`, and `cargo`.
+
+[Follow these instructions to install the Rust toolchain.][rust-install]
+
+The Rust and WebAssembly experience is riding the Rust release trains to stable!
+That means we don't require any experimental feature flags. However, we do
+require Rust 1.30 or newer.
+
+#### wasm-pack
+
+`wasm-pack` is your one-stop shop for building, testing, and publishing
+Rust-generated WebAssembly.
+
+Get [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/) here!
+
+#### cargo-generate
+
+[cargo-generate](https://github.com/cargo-generate/cargo-generate) helps you get up and running quickly with a new Rust project
+by leveraging a pre-existing git repository as a template.
+
+Install `cargo-generate` with this command:
+
+```
+cargo install cargo-generate
 ```
 
-Once that's installed you'll need to get the `wasm32-unknown-unknown` toolchain.
+#### npm
 
-```bash
-$ rustup target add wasm32-unknown-unknown --toolchain nightly
+`npm` is a package manager for JavaScript. We will use it to install and run a
+JavaScript bundler and development server. At the end of the tutorial, we will
+publish our compiled `.wasm` to the `npm` registry.
+
+Follow these instructions to install [npm](https://docs.npmjs.com/getting-started).
+
+If you already have `npm` installed, make sure it is up-to-date with this command:
+
+```
+npm install npm@latest -g
 ```
 
-Next up if you're interested in making small wasm binaries you'll want to
-install the [wasm-gc][wasm-gc] tool to make smaller binaries and to work around bugs
-in the compiler toolchain for now:
-
-```bash
-$ cargo install wasm-gc
-```
-
-And finally if you're *really* interested in making small wasm binaries you'll
-want to install `wasm-opt` from the [binaryen toolkit][binaryen].
-
-[rustup]: https://www.rustup.rs/
-[binaryen]: https://github.com/WebAssembly/binaryen
-[wasm-gc]: https://github.com/alexcrichton/wasm-gc
+[rust-install]: https://www.rust-lang.org/tools/install
+[npm-install]: https://www.npmjs.com/get-npm
+[wasm-pack]: https://github.com/rustwasm/wasm-pack
+[cargo-generate]: https://github.com/ashleygwilliams/cargo-generate
+[wasm-pack-install]: https://rustwasm.github.io/wasm-pack/installer/
 
 ## Build the Project
 
