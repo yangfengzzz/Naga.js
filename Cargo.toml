@@ -1,7 +1,7 @@
 [package]
 name = "naga-wasm"
 version = "0.1.0"
-authors = "ArcheGraphics"
+authors = ["ArcheGraphics"]
 edition = "2021"
 
 [package.metadata.wasm-pack.profile.release]
