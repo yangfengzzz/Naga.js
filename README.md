@@ -104,3 +104,5 @@ npm run dev
 Paste the host address in Chrome and open developer tool, refresh the page will stop in the debugger mark.
 Move your mouse on the variable `wgsl` will show the formatted wgsl shader source code. You can use this project to test
 whether the glsl to wgsl transition have the right result.
+
+![Transition](https://github.com/ArcheGraphics/Naga.js/raw/master/image/transition.png "Result")
