@@ -3,6 +3,8 @@
 
 .DS_Store
 .idea
+example/package-lock.json
+example/node_modules/
 
 # User-specific stuff
 .idea/**/workspace.xml

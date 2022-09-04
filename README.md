@@ -26,7 +26,8 @@ Get [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/) here!
 
 ### cargo-generate
 
-[cargo-generate](https://github.com/cargo-generate/cargo-generate) helps you get up and running quickly with a new Rust project
+[cargo-generate](https://github.com/cargo-generate/cargo-generate) helps you get up and running quickly with a new Rust
+project
 by leveraging a pre-existing git repository as a template.
 
 Install `cargo-generate` with this command:
@@ -50,9 +51,13 @@ npm install npm@latest -g
 ```
 
 [rust-install]: https://www.rust-lang.org/tools/install
+
 [npm-install]: https://www.npmjs.com/get-npm
+
 [wasm-pack]: https://github.com/rustwasm/wasm-pack
+
 [cargo-generate]: https://github.com/ashleygwilliams/cargo-generate
+
 [wasm-pack-install]: https://rustwasm.github.io/wasm-pack/installer/
 
 ## Build the Project
@@ -86,3 +91,16 @@ pkg/
 
 The `README.md` file is copied from the main project, but the others are
 completely new.
+
+## Example
+
+The example folder show how to use the wasm binary into you project:
+
+```
+npm install
+npm run dev
+```
+
+Paste the host address in Chrome and open developer tool, refresh the page will stop in the debugger mark.
+Move your mouse on the variable `wgsl` will show the formatted wgsl shader source code. You can use this project to test
+whether the glsl to wgsl transition have the right result.
